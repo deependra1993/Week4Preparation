@@ -41,14 +41,23 @@
                 <label>Release Date<br/>
                     <input [(ngModel)]="real" type="text" formControlName="realis">    
                   </label>
+                   <div  class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">
+                      {{titlealert}}
+                  </div>
 
                   <label>Genre<br/>
                     <input [(ngModel)]="genre" type="text" formControlName="genre">    
                   </label>
+                   <div  class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">
+                      {{titlealert}}
+                  </div>
 
                   <label>Duration<br/>
                     <input [(ngModel)]="durat" type="" formControlName="durati">    
                   </label>
+                   <div  class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">
+                      {{titlealert}}
+                  </div>
 
 
 
@@ -58,6 +67,9 @@
 
                     </textarea>    
                   </label>
+                   <div  class="alert" *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">
+                      {{titlealert}}
+                  </div>
                  
                   <input type="submit" 
                     (click)="submitOk()"
